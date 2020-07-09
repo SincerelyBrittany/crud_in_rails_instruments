@@ -1,0 +1,9 @@
+<h1>All instruments</h1>
+<ol>
+<% @instruments.each do |instrument| %>
+<li><%= link_to instrument.name, instrument %> <%= link_to 'edit', edit_instrument_path(instrument) %> </li>
+<%end %>
+</ol>
+
+
+<%= link_to "Create a Instrument", new_instrument_path %>
