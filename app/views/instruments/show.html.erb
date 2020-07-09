@@ -1,0 +1,10 @@
+<h1> <%= @instrument.name %> </h1>
+<p> <%= @instrument.instrument_type %> </p>
+<p> <%= "👍" * @instrument.rating %> </p>
+<p> <%= @instrument.pleasant %> </p>
+
+<%= button_to 'delete', @instrument, method: :delete %>
+
+<%= link_to "See all Instruments", instruments_path %> |
+
+<%= link_to "Create a Instrument", new_instrument_path %>
