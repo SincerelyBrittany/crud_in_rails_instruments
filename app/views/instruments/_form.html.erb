@@ -1,0 +1,8 @@
+<h1>Form For</h1>
+<%= form_for @instrument do |f| %>
+Name: <%= f.text_field :name %>
+Type: <%= f.text_field :instrument_type %>
+Rating <%= f.number_field :rating %>
+Pleasant? <%= f.check_box :pleasant, {:checked=>true} %>
+<%= f.submit %>
+<% end %>
