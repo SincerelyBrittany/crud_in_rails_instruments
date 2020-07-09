@@ -1,0 +1,46 @@
+<h1>Add Your Instrument To The Flatireon Collection</h1>
+
+<%# This is not the way we do things in Rails, please do not copy this into your code%>
+
+<% if false %>
+<form action="/instruments" method="post">
+  <input type="hidden" id="authenticity_token" name="authenticity_token" value=<%= form_authenticity_token %>>
+  <label for="name">name:</label><br>
+  <input type="text" id="name" name="instrument[name]"><br>
+  <label for="instrument_type">instrument_type:</label><br>
+  <input type="text" id="instrument_type" name="instrument[instrument_type]"><br><br>
+  <label for="rating">Rating:</label><br>
+  <input type="number" id="rating" name="instrument[rating]"><br><br>
+  <label for="pleasant">pleasant:</label><br>
+  <input type="checkbox" id="checkbox" name="instrument[pleasant]" value="1"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<%# Form tag is most useful for when we aren't using the form to build something we have a model for in our database%>
+
+<h1>Form Tag</h1>
+<%= form_tag '/instruments', method: :post %>
+  <label for="name">name:</label><br>
+  <%= text_field_tag 'instrument[name]' %><br>
+  <label for="instrument_type">instrument_type:</label><br>
+  <%= text_field_tag 'instrument[instrument_type]'%><br>
+  <label for="rating">Rating:</label><br>
+  <%= number_field_tag 'instrument[rating]'%><br>
+  <label for="pleasant">pleasant:</label><br>
+  <%= check_box_tag 'instrument[pleasant]', 'true', 'false'  %><br>
+<%= submit_tag %>
+
+<% end %>
+
+
+<%= render 'form' %>
+
+<%= link_to "See all Instruments", instruments_path %> 
+
+
+
+
+
+
+
+
