@@ -1,25 +1,12 @@
-# README
+# crud_in_rails_instruments README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application with very basic CRUD functionality for created instruments. 
 
-Things you may want to cover:
+To use 
+fork this repo
+git clone
+rails db:migrate
+rails s
 
-* Ruby version
+visit localhost:3000/instruments
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# crud_in_rails_instruments
